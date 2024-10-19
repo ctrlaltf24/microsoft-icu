@@ -1,0 +1,2567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="../common/bidi">
+      <UniqueIdentifier>{8049805d-3f8b-4731-ac8a-aa19b3cbea45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/break iteration">
+      <UniqueIdentifier>{7668dce2-7846-4b48-8bd4-4ef781671b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/collation">
+      <UniqueIdentifier>{f08dc85c-73ea-47b5-a867-b67589e6bebf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/collections">
+      <UniqueIdentifier>{51edbf4b-fe36-401e-9571-0472d9dae727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/configuration">
+      <UniqueIdentifier>{3fd9d1ea-6efc-4768-a43d-811379162322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/conversion">
+      <UniqueIdentifier>{f74f43ea-8ea9-49a9-a097-e2aa5a409368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/data &amp; memory">
+      <UniqueIdentifier>{c7b856da-4f50-42c5-a741-8995df25dc6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/formatting">
+      <UniqueIdentifier>{c76cfce3-cfe6-4de0-aa37-44c599377e2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/idna">
+      <UniqueIdentifier>{9abf6a02-9db0-4ecd-a8d9-bbb28073a424}</UniqueIdentifier>
+      <Extensions>*.c,*.h</Extensions>
+    </Filter>
+    <Filter Include="../common/locales &amp; resources">
+      <UniqueIdentifier>{b481ca81-7bc8-4399-a220-27fc29a7b74d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/normalization">
+      <UniqueIdentifier>{923074b3-0112-4faf-b8c7-59feb85a0835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/properties &amp; sets">
+      <UniqueIdentifier>{17948745-0376-4851-bf12-7dabf94622e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/registration">
+      <UniqueIdentifier>{b32b9445-b6dc-4800-94a6-28641e586cd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/sprep">
+      <UniqueIdentifier>{ea285df7-8e35-4b10-ae2a-86cb32c0d477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../common/strings">
+      <UniqueIdentifier>{2c52192a-7b17-4c3b-998e-ca025063bd3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../i18n/misc">
+      <UniqueIdentifier>{15349ca9-e31d-4f6b-a4c4-f73892fa5aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../i18n/regex">
+      <UniqueIdentifier>{faac495b-a9d6-47ad-ae47-a56c30c60b3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../i18n/transforms">
+      <UniqueIdentifier>{e750fa6c-e471-4db0-92f9-81c84d84b5ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../i18n/charset detect">
+      <UniqueIdentifier>{59edb5a3-26d1-4c91-af50-4aa35e6e9730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="../i18n/spoof">
+      <UniqueIdentifier>{7b4a0782-fad3-44cd-b3b4-e75b0356d600}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Start common compile -->
+    <ClCompile Include="../common/ubidi.cpp">
+      <Filter>bidi</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ubidi_props.cpp">
+      <Filter>bidi</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ubidiln.cpp">
+      <Filter>bidi</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ubidiwrt.cpp">
+      <Filter>bidi</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ushape.cpp">
+      <Filter>bidi</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/brkeng.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/brkiter.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/dictbe.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/lstmbe.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbi.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbidata.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbinode.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbirb.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbiscan.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbisetb.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbistbl.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbitblb.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/rbbi_cache.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ubrk.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucol_swp.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/pluralmap.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/propsvec.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uarrsort.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uenum.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uhash.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uhash_us.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ulist.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unifiedcache.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustack.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustrenum.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utrie.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utrie_swap.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utrie2.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utrie2_builder.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uvector.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uvectr32.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uvectr64.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/errorcode.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/icudataver.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locmap.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/putil.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/umath.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/umutex.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utrace.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utypes.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/wintz.cpp">
+      <Filter>configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv2022.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_bld.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_cb.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_cnv.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_err.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_ext.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_io.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_lmb.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_set.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_u16.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_u32.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_u7.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_u8.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvbocu.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvdisp.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvhz.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvisci.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvlat1.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvmbcs.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvscsu.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnvsel.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/cmemory.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/sharedobject.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucln_cmn.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucmndata.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/udata.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/udatamem.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/udataswp.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uinit.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/umapfile.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uobject.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/dtintrv.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locdspnm.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/parsepos.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/simpleformatter.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucurr.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustrfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/util.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/util_props.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/punycode.cpp">
+      <Filter>idna</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uidna.cpp">
+      <Filter>idna</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uts46.cpp">
+      <Filter>idna</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/localebuilder.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/localematcher.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/localeprioritylist.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locavailable.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locbased.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locdispnames.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locdistance.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locid.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/loclikely.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/loclikelysubtags.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locresdata.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/locutil.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/lsr.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/resbund.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/resbund_cnv.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucat.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uloc.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uloc_tag.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ures_cnv.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uresbund.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uresdata.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/resource.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/caniter.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/filterednormalizer2.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/loadednormalizer2impl.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/normalizer2.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/normalizer2impl.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/normlzr.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unorm.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unormcmp.cpp">
+      <Filter>normalization</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/bmpset.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/characterproperties.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/emojiprops.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/propname.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ruleiter.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucase.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uchar.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unames.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unifilt.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unifunct.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uniset.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uniset_closure.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uniset_props.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unisetspan.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uprops.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/usc_impl.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uscript.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uscript_props.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uset.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uset_props.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/usetiter.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/serv.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/servlk.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/servlkf.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/servls.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/servnotf.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/servrbf.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/servslkf.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/usprep.cpp">
+      <Filter>sprep</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/bytesinkutil.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/bytestream.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/chariter.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/charstr.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/cstring.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/cstr.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/cwchar.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/edits.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/schriter.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/stringpiece.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucasemap.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucasemap_titlecase_brkiter.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uchriter.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uinvchar.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uiter.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unistr.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unistr_case.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unistr_case_locale.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unistr_cnv.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unistr_props.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/unistr_titlecase_brkiter.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustr_cnv.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustr_titlecase_brkiter.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustr_wcs.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustrcase.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustrcase_locale.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustring.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ustrtrns.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utext.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/utf_impl.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/bytestrie.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/bytestrieiterator.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/bytestriebuilder.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/messagepattern.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/appendable.cpp">
+      <Filter>strings</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/dictionarydata.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucnv_ct.cpp">
+      <Filter>conversion</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucharstrie.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucharstriebuilder.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucharstrieiterator.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ucptrie.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/umutablecptrie.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/patternprops.cpp">
+      <Filter>properties &amp; sets</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/stringtriebuilder.cpp">
+      <Filter>collections</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/uloc_keytype.cpp">
+      <Filter>locales &amp; resources</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/filteredbrk.cpp">
+      <Filter>break iteration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/icuplug.cpp">
+      <Filter>registration</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/ubiditransform.cpp">
+      <Filter>bidi</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/static_unicode_sets.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../common/restrace.cpp">
+      <Filter>data &amp; memory</Filter>
+    </ClCompile>
+    <!-- end common compile -->
+    <!-- start i18n compile -->
+    
+    <ClCompile Include="../i18n/coleitr.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/coll.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/search.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/sortkey.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/stsearch.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ucol.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ucol_res.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ucol_sit.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ucoleitr.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/usearch.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/astro.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/basictz.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/buddhcal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/calendar.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/cecal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/chnsecal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/choicfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/coptccal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/curramt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/currfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/currpinf.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/currunit.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dangical.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/datefmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dcfmtsym.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/decContext.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/decimfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/decNumber.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/double-conversion-bignum-dtoa.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/double-conversion-bignum.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/double-conversion-cached-powers.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/double-conversion-double-to-string.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/double-conversion-fast-dtoa.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/double-conversion-string-to-double.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/double-conversion-strtod.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dtfmtsym.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dtitvfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dtitvinf.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dtptngen.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dtrule.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ethpccal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/fmtable.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/fmtable_cnv.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/format.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/formattedval_iterimpl.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/formattedval_sbimpl.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/formattedvalue.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/fphdlimp.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/fpositer.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/gender.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/gregocal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/gregoimp.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/hebrwcal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/indiancal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/islamcal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/japancal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/listformatter.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ulistformatter.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/measfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/measunit.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/measunit_extra.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/measure.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/msgfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/nfrs.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/nfrule.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/nfsubs.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numsys.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/olsontz.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/persncal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/pluralranges.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/plurfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/plurrule.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/quantityformatter.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rbnf.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rbtz.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/reldatefmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/reldtfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/scientificnumberformatter.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/selfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/sharedbreakiterator.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/simpletz.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/smpdtfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/smpdtfst.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/standardplural.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/taiwncal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/timezone.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tmunit.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tmutamt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tmutfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tzrule.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tztrans.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ucal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/udat.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/udateintervalformat.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/udatpg.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ufieldpositer.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ulocdata.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/umsg.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/unum.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/unumsys.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/upluralrules.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/utmscale.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/vtzone.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/vzone.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/windtfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/winnmfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/wintzimpl.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/zonemeta.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/zrule.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ztrans.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ucln_in.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/regexcmp.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/regeximp.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/regexst.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/regextxt.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rematch.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/repattrn.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uregex.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uregexc.cpp">
+      <Filter>regex</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/anytrans.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/brktrans.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/casetrn.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/cpdtrans.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/esctrn.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/funcrepl.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/name2uni.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/nortrans.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/nultrans.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/quant.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rbt.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rbt_data.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rbt_pars.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rbt_rule.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rbt_set.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/remtrans.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/strmatch.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/strrepl.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/titletrn.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tolowtrn.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/toupptrn.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/translit.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/transreg.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tridpars.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/unesctrn.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uni2name.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/utrans.cpp">
+      <Filter>transforms</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csdetect.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csmatch.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csr2022.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csrecog.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csrmbcs.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csrsbcs.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csrucode.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/csrutf8.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/inputext.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/ucsdet.cpp">
+      <Filter>charset detect</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/scriptset.cpp">
+      <Filter>spoof</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uspoof.cpp">
+      <Filter>spoof</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uspoof_build.cpp">
+      <Filter>spoof</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uspoof_conf.cpp">
+      <Filter>spoof</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uspoof_impl.cpp">
+      <Filter>spoof</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/alphaindex.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tzfmt.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tzgnames.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tznames.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/tznames_impl.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/compactdecimalformat.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/region.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uregion.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_affixutils.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_asformat.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_compact.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_decimalquantity.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_decimfmtprops.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_fluent.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_formatimpl.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_grouping.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_integerwidth.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_longnames.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_modifiers.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_notation.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_output.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_padding.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_patternmodifier.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_patternstring.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_rounding.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_scientific.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/formatted_string_builder.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_usageprefs.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_utils.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_mapper.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_multiplier.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_currencysymbols.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_skeletons.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_symbolswrapper.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/number_capi.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/string_segment.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_parsednumber.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_impl.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_symbols.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_decimal.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_scientific.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_currency.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_affixes.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_compositions.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numparse_validators.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numrange_capi.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numrange_fluent.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/numrange_impl.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/dayperiodrules.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/erarules.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/units_complexconverter.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/units_converter.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/units_data.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/units_router.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/displayoptions.cpp">
+      <Filter>formatting</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/bocsu.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collation.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationbuilder.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationcompare.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationdata.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationdatabuilder.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationdatareader.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationdatawriter.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationfastlatin.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationfastlatinbuilder.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationfcd.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationiterator.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationkeys.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationroot.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationrootelements.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationruleparser.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationsets.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationsettings.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationtailoring.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/collationweights.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/rulebasedcollator.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/uitercollationiterator.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/utf8collationiterator.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <ClCompile Include="../i18n/utf16collationiterator.cpp">
+      <Filter>collation</Filter>
+    </ClCompile>
+    <!-- End i18n compile -->
+  </ItemGroup>
+  <ItemGroup>
+  <!-- start common include -->
+    <ClInclude Include="../common/ubidi_props.h">
+      <Filter>bidi</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ubidiimp.h">
+      <Filter>bidi</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/brkeng.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/dictbe.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/lstmbe.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbidata.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbinode.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbirb.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbirpt.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbiscan.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbisetb.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbitblb.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/rbbi_cache.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ubrkimpl.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucol_data.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucol_swp.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/hash.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/pluralmap.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/propsvec.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uarrsort.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uelement.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uenumimp.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uhash.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ulist.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/unifiedcache.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ustrenum.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/utrie.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/utrie2.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/utrie2_impl.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uvector.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uvectr32.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uvectr64.h">
+      <Filter>collections</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/cpputils.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/locmap.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/mutex.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/putilimp.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uassert.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/umutex.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uposixdefs.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/utracimp.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/wintz.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucnv_bld.h">
+      <Filter>conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucnv_cnv.h">
+      <Filter>conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucnv_ext.h">
+      <Filter>conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucnv_imp.h">
+      <Filter>conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucnv_io.h">
+      <Filter>conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucnvmbcs.h">
+      <Filter>conversion</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/cmemory.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/sharedobject.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucln.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucln_cmn.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucln_imp.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucmndata.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/udatamem.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/udataswp.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/umapfile.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <CustomBuild Include="../common/unicode\locdspnm.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\simpleformatter.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <ClInclude Include="../common/ustrfmt.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/util.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <CustomBuild Include="../common/unicode\ucurr.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <ClInclude Include="../common/ucurrimp.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <CustomBuild Include="../common/unicode\udisplaycontext.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uldnames.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <ClInclude Include="../common/punycode.h">
+      <Filter>idna</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/localeprioritylist.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/locbased.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/locdistance.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/charstrmap.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uniquecharstr.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/loclikelysubtags.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/locutil.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/lsr.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ulocimp.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uresdata.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/resource.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uresimp.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ureslocs.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/norm2allmodes.h">
+      <Filter>normalization</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/normalizer2impl.h">
+      <Filter>normalization</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/unormimp.h">
+      <Filter>normalization</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/bmpset.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/propname.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ruleiter.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/emojiprops.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucase.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ulayout_props.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/unisetspan.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uprops.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/usc_impl.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uset_imp.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/icuplugimp.h">
+      <Filter>registration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/serv.h">
+      <Filter>registration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/servloc.h">
+      <Filter>registration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/servnotf.h">
+      <Filter>registration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/sprpimpl.h">
+      <Filter>sprep</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/bytesinkutil.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/charstr.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/cstring.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/cstr.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/cwchar.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucasemap_imp.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uinvchar.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/unistrappender.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ustr_cnv.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ustr_imp.h">
+      <Filter>strings</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/utypeinfo.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/localsvc.h">
+      <Filter>locales &amp; resources</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/msvcres.h">
+      <Filter>configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/propname_data.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ubidi_props_data.h">
+      <Filter>bidi</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/ucase_props_data.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/uchar_props_data.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/messageimpl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/dictionarydata.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/patternprops.h">
+      <Filter>properties &amp; sets</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/unicode\filteredbrk.h">
+      <Filter>break iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/unicode\ubiditransform.h">
+      <Filter>bidi</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/static_unicode_sets.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/capi_helper.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <ClInclude Include="../common/restrace.h">
+      <Filter>data &amp; memory</Filter>
+    </ClInclude>
+    <!-- end common include -->
+    <!-- start i18n include -->
+    <ClInclude Include="../i18n/bocsu.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/ucol_imp.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/usrchimp.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/astro.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/buddhcal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/cecal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/chnsecal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/coptccal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/currfmt.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/dangical.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/dayperiodrules.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/decContext.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/decNumber.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/decNumberLocal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-bignum-dtoa.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-bignum.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-cached-powers.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-diy-fp.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-double-to-string.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-fast-dtoa.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-ieee.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-utils.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-string-to-double.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion-strtod.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/double-conversion.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/dt_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/dtitv_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/dtptngen_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/ethpccal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/formattedval_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/fphdlimp.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/gregoimp.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/hebrwcal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/indiancal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/islamcal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/japancal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/measunit_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/msgfmt_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/nfrlist.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/nfrs.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/nfrule.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/nfsubs.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_affixutils.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_asformat.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_compact.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_decimalquantity.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_decimfmtprops.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_decnum.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_formatimpl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_longnames.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_microprops.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_modifiers.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_patternmodifier.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_patternstring.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_roundingutils.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_scientific.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/formatted_string_builder.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_types.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_utypes.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_usageprefs.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_utils.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_mapper.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_multiplier.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_currencysymbols.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_skeletons.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/number_symbolswrapper.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/string_segment.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_symbols.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_decimal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_scientific.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_currency.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_affixes.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_compositions.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_validators.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_types.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numparse_utils.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numrange_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/olsontz.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/persncal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/pluralranges.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/plurrule_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/quantityformatter.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/reldtfmt.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/sharedbreakiterator.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/sharedcalendar.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/shareddateformatsymbols.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/sharednumberformat.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/sharedpluralrules.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/smpdtfst.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/standardplural.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/taiwncal.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/umsg_imp.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/units_complexconverter.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/units_converter.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/units_data.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/units_router.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/vzone.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/windtfmt.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/winnmfmt.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/wintzimpl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/zonemeta.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/zrule.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/ztrans.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/ucln_in.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/regexcmp.h">
+      <Filter>regex</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/regexcst.h">
+      <Filter>regex</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/regeximp.h">
+      <Filter>regex</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/regexst.h">
+      <Filter>regex</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/regextxt.h">
+      <Filter>regex</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/anytrans.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/brktrans.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/casetrn.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/cpdtrans.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/esctrn.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/funcrepl.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/name2uni.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/nortrans.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/nultrans.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/quant.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/rbt.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/rbt_data.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/rbt_pars.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/rbt_rule.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/rbt_set.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/remtrans.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/strmatch.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/strrepl.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/titletrn.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/tolowtrn.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/toupptrn.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/transreg.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/tridpars.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/unesctrn.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/uni2name.h">
+      <Filter>transforms</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csdetect.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csmatch.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csr2022.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csrecog.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csrmbcs.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csrsbcs.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csrucode.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/csrutf8.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/inputext.h">
+      <Filter>charset detect</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/scriptset.h">
+      <Filter>spoof</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/uspoof_conf.h">
+      <Filter>spoof</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/uspoof_impl.h">
+      <Filter>spoof</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/tzgnames.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/tznames_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/numsys_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/selfmtimpl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/region_impl.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collation.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationbuilder.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationcompare.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationdata.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationdatabuilder.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationdatareader.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationdatawriter.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationfastlatin.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationfastlatinbuilder.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationfcd.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationiterator.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationkeys.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationroot.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationrootelements.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationruleparser.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationsets.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationsettings.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationtailoring.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/collationweights.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/utf16collationiterator.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/uitercollationiterator.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/utf8collationiterator.h">
+      <Filter>collation</Filter>
+    </ClInclude>
+    <ClInclude Include="../i18n/erarules.h">
+      <Filter>formatting</Filter>
+    </ClInclude>
+    <!-- end i18n include -->
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="../common/common.rc">
+      <Filter>configuration</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="../i18n/i18n.rc">
+      <Filter>misc</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../common/unicode\ubidi.h">
+      <Filter>bidi</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ushape.h">
+      <Filter>bidi</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\brkiter.h">
+      <Filter>break iteration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\dbbi.h">
+      <Filter>break iteration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\rbbi.h">
+      <Filter>break iteration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ubrk.h">
+      <Filter>break iteration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\strenum.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uenum.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\docmain.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\errorcode.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\icudataver.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\platform.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ptypes.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\putil.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\std_string.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uconfig.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\umachine.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\urename.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utrace.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utypes.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uvernum.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uversion.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucnv.h">
+      <Filter>conversion</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucnv_cb.h">
+      <Filter>conversion</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucnv_err.h">
+      <Filter>conversion</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucnvsel.h">
+      <Filter>conversion</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\localpointer.h">
+      <Filter>data &amp; memory</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uclean.h">
+      <Filter>data &amp; memory</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\udata.h">
+      <Filter>data &amp; memory</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uobject.h">
+      <Filter>data &amp; memory</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\dtintrv.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\parseerr.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\parsepos.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\umisc.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\idna.h">
+      <Filter>idna</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uidna.h">
+      <Filter>idna</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\localebuilder.h">
+      <Filter>locales &amp; resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\localematcher.h">
+      <Filter>locales &amp; resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\locid.h">
+      <Filter>locales &amp; resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\resbund.h">
+      <Filter>locales &amp; resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucat.h">
+      <Filter>locales &amp; resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uloc.h">
+      <Filter>locales &amp; resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ures.h">
+      <Filter>locales &amp; resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\caniter.h">
+      <Filter>normalization</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\normalizer2.h">
+      <Filter>normalization</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\normlzr.h">
+      <Filter>normalization</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\unorm.h">
+      <Filter>normalization</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\unorm2.h">
+      <Filter>normalization</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\symtable.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uchar.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\unifilt.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\unifunct.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\unimatch.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uniset.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uscript.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uset.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\usetiter.h">
+      <Filter>properties &amp; sets</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\usprep.h">
+      <Filter>sprep</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\bytestream.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\casemap.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\char16ptr.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\chariter.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\edits.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\rep.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\schriter.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\stringpiece.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucasemap.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uchriter.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\uiter.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\unistr.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\urep.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ustring.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utext.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utf.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utf16.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utf32.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utf8.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\utf_old.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\bytestrie.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\bytestriebuilder.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\messagepattern.h">
+      <Filter>formatting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\appendable.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ustringtrie.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucharstrie.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucharstriebuilder.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\ucptrie.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\umutablecptrie.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\enumset.h">
+      <Filter>data &amp; memory</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\icuplug.h">
+      <Filter>configuration</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\stringtriebuilder.h">
+      <Filter>collections</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../common/unicode\stringoptions.h">
+      <Filter>strings</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
