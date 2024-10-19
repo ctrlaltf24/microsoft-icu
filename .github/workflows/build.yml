@@ -1,0 +1,85 @@
+# Adopted from unicode's upstream, modified for our use-case https://github.com/unicode-org/icu/blob/99ca2ad931600f317501a41bca4c8b9afb946de9/.github/workflows/icu4c.yml#L394C1-L481C38
+
+on:
+  push:
+    branches:
+      - main
+      - release/*
+  pull_request: {}
+  workflow_dispatch:
+    inputs:
+      gitReleaseTag:
+        description: 'Release tag to upload to. Must start with "v"'
+        type: string
+
+jobs:
+  # Windows MSVC distribution (conditional release)
+  windows-msvc-dist-release:
+    runs-on: windows-2022  # Updated in BRS
+    permissions:
+      contents: write # So that we can upload to release
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+    - name: Set up MSBuild for x64
+      uses: microsoft/setup-msbuild@v2
+      with:
+        msbuild-architecture: x64
+
+    - name: Build entire Solution x64
+      run: |
+        $env:ICU_DATA_FILTER_FILE = '${{ github.workspace }}/build/filters/filter.json'
+        msbuild icu/icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true
+        msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x64
+    # FIXME: a number of tests fail due to removal of en_US_POSIX. Ideally we wouldn't need to remove this locale.
+    # - name: Run Tests x64 (icucheck.bat)
+    #   run: ./icu/icu4c/source/allinone/icucheck.bat x64 Release
+
+    - name: Build entire Solution x86
+      run: |
+        $env:ICU_DATA_FILTER_FILE = '${{ github.workspace }}/build/filters/filter.json'
+        msbuild icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x86 /p:SkipUWP=true
+        msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x86
+      # The following tests fail with this error, the x64 passes.
+      #  testing ICU in "D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..  arch=x86 type=Release
+      # ==== icuinfo =========================================================================
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\tools\icuinfo\x86\Release\icuinfo.exe
+      # The system cannot find the path specified.
+      # ==== intltest =========================================================================
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\intltest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\intltest\x86\Release\intltest.exe
+      # The system cannot find the path specified.
+      # ==== iotest =========================================================================
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\iotest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\iotest\x86\Release\iotest.exe
+      # The system cannot find the path specified.
+      # ==== cintltst =========================================================================
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\cintltst>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\cintltst\x86\Release\cintltst.exe
+      # The system cannot find the path specified.
+    # - name: Run Tests x86 (icucheck.bat)
+    #   run: ./icu/icu4c/source/allinone/icucheck.bat x86 Release
+
+    - name: Generate forwarding dlls x64
+      shell: cmd
+      run: |
+        FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
+        cmd.exe /c ""%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x64 && .\build\scripts\build_forwarding_dlls.bat x64"
+    - name: Generate forwarding dlls x86
+      shell: cmd
+      run: |
+        FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
+        cmd.exe /c ""%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x86 && .\build\scripts\build_forwarding_dlls.bat x86"
+
+    - name: "Run PowerShell: Distrelease script"
+      run: |
+        ./build/scripts/distrelease_overlay.ps1
+      shell: pwsh
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: icu4c.run_#${{ github.run_number }}
+        path: icu/icu4c/source/dist/icu-win.tar.gz
+    - name: Upload to release
+      if: ${{ inputs.gitReleaseTag && startsWith(inputs.gitReleaseTag, 'v') }}
+      run: |
+        gh release upload ${{ inputs.gitReleaseTag }} icu4c/source/dist/icu-win.tar.gz --clobber
+      env:
+        GH_TOKEN: ${{ github.token }}
