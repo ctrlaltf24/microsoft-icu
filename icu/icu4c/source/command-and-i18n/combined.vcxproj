@@ -35,7 +35,7 @@
     </Midl>
     <ClCompile>
       <!-- FIXME: figure out how/when to add U_SHOW_CPLUSPLUS_API=0 . Needs to be set after compiling before dll exporting -->
-      <PreprocessorDefinitions>U_COMBINED_IMPLEMENTATION;U_ATTRIBUTE_DEPRECATED=;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ICU_DATA_DIR_WINDOWS="globalization\\icu\\";U_COMBINED_IMPLEMENTATION;U_ATTRIBUTE_DEPRECATED=;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>..\..\include;..\common;..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -47,11 +47,6 @@
       <!-- MSFT-Change: Include the ICU major version number in the PDB filename. -->
       <ProgramDataBaseFileName>$(OutDir)/icu$(IcuMajorVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
-    <Link>
-      <!-- The icudt.lib is for U_ICUDATA_ENTRY_POINT -->
-      <AdditionalDependencies>icudt.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>.\..\..\$(IcuLibOutputDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
   </ItemDefinitionGroup>
   <!-- Options that are common to all 'Debug' project configurations -->
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
