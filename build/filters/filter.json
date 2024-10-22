@@ -1,0 +1,33 @@
+{
+    "localeFilter": {
+      "filterType": "regex",
+      "excludelist": [
+        "^bgc$",
+        "^bgc_IN$",
+        "^bho$",
+        "^bho_IN$",
+        "^cv$",
+        "^cv_RU$",
+        "^en_MV$",
+        "^en_US_POSIX$",
+        "^hi_Latn$",
+        "^hi_Latn_IN$",
+        "^ibb$",
+        "^ibb_NG$",
+        "^iu_CA$",
+        "^iu_Latn_CA$",
+        "^jv_Java$",
+        "^jv_Java_ID$",
+        "^oc_ES$",
+        "^pap_029$",
+        "^quc_GT$",
+        "^raj$",
+        "^raj_IN$",
+        "^tzm_Arab$",
+        "^tzm_Arab_MA$",
+        "^tzm_Tfng$",
+        "^tzm_Tfng_MA$"
+      ]
+    }
+}
+  
