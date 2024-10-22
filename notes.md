@@ -13,7 +13,20 @@ setup env (in one cmd terminal unless otherwise specified):
 ```
 - if you're building in a different dir, fix the path-ing on the file `configure=$configuredir/configure`
 - (back in cmd) `bash ./runConfigureICU MSYS/MSVC --with-library-bits=64 --with-data-packaging=archive --disable-renaming --disable-tests`
-- In order to get all langs to build had to edit /data/rules.mk to use a variable for the langs likes so: `$${LANGS}` then export LANGS on my command line. This is to get around maximum command length. <!-- FIXME: move this into a patch-->
+- run the data builder
+```bash
+YOUR_BUILD_ROOT=. # Please edit this with your build root
+cd icu/icu4c/source/python
+python3 -m icutools.databuilder --src_dir=../data --mode=gnumake --filter=../../../../build/filters/filter.json > $YOUR_BUILD_ROOT/data/rules.mk 
+
+# If you're on windows, you'll need to get around Window's maximum line length like so:
+# Now edit the generated rules on line ~2110 and ~3110 when you see the long lines starting with `-i $(OUT_DIR) --usePoolBundle $(OUT_DIR)/ -k `
+# Cut and paste the remaining line contents into an env (something like this: export LANG="en_US..."). Then replace the contents of the file with \$\${LANG}
+
+# Then build!
+cd $YOUR_BUILD_ROOT/data
+make clean all
+```
 - `make` (this is needed for generating the icu76l.dat, we could cope it but this is easier)
 - Generate libs for combined build `msbuild icu\icu4c\source\allinone\allinone.sln /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true`
 - Generate the combined icu.dll `msbuild icu\icu4c\source\command-and-i18n\combined.vcxproj /p:Configuration=Release /p:Platform=x64 `
