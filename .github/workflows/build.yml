@@ -42,7 +42,7 @@ jobs:
       run: |
         FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
         "%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x64
-        ./build/scripts/build_forwarding_dlls.bat x64
+        .\build\scripts\build_forwarding_dlls.bat x64
 
     - name: Build entire Solution x86
       run: |
@@ -69,7 +69,7 @@ jobs:
       run: |
         FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
         "%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x86
-        ./build/scripts/build_forwarding_dlls.bat x86
+        .\build\scripts\build_forwarding_dlls.bat x86
 
     - name: "Run PowerShell: Distrelease script"
       run: |
