@@ -302,16 +302,7 @@ typedef double UDate;
 #define U_COMBINED_IMPLEMENTATION 1
 #endif
 
-// XXX: move this first if statement into a patch
-#if defined(U_COMMON_IMPLEMENTATION) && defined(U_I18N_IMPLEMENTATION)
-#define U_DATA_API     U_IMPORT
-#define U_COMMON_API   U_EXPORT
-#define U_I18N_API     U_EXPORT
-#define U_LAYOUT_API   U_IMPORT
-#define U_LAYOUTEX_API U_IMPORT
-#define U_IO_API       U_IMPORT
-#define U_TOOLUTIL_API U_IMPORT
-#elif defined(U_COMBINED_IMPLEMENTATION)
+#if defined(U_COMBINED_IMPLEMENTATION)
 #define U_DATA_API     U_EXPORT
 #define U_COMMON_API   U_EXPORT
 #define U_I18N_API     U_EXPORT
