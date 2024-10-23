@@ -51,16 +51,16 @@ jobs:
       # The following tests fail with this error, the x64 passes.
       #  testing ICU in "D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..  arch=x86 type=Release
       # ==== icuinfo =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\tools\icuinfo\x86\Release\icuinfo.exe  
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\tools\icuinfo\x86\Release\icuinfo.exe
       # The system cannot find the path specified.
       # ==== intltest =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\intltest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\intltest\x86\Release\intltest.exe  
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\intltest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\intltest\x86\Release\intltest.exe
       # The system cannot find the path specified.
       # ==== iotest =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\iotest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\iotest\x86\Release\iotest.exe  
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\iotest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\iotest\x86\Release\iotest.exe
       # The system cannot find the path specified.
       # ==== cintltst =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\cintltst>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\cintltst\x86\Release\cintltst.exe  
+      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\cintltst>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\cintltst\x86\Release\cintltst.exe
       # The system cannot find the path specified.
     # - name: Run Tests x86 (icucheck.bat)
     #   run: ./icu/icu4c/source/allinone/icucheck.bat x86 Release

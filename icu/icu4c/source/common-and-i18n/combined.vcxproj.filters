@@ -661,7 +661,6 @@
     </ClCompile>
     <!-- end common compile -->
     <!-- start i18n compile -->
-    
     <ClCompile Include="../i18n/coleitr.cpp">
       <Filter>collation</Filter>
     </ClCompile>
