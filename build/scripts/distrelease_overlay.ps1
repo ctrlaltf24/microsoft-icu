@@ -50,6 +50,6 @@ Remove-Item -Path $destination -ErrorAction Continue
 Echo $source
 Echo $destination
 
-tar -cvf $destination -C $source .
+tar -czvf $destination -C $source .
 
 echo $destination
