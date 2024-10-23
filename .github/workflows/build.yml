@@ -39,8 +39,8 @@ jobs:
         msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x86
     - name: Run Tests (icucheck.bat)
       run: |
-        icu4c/source/allinone/icucheck.bat x64 Release
-        icu4c/source/allinone/icucheck.bat x86 Release
+        ./icu/icu4c/source/allinone/icucheck.bat x64 Release
+        ./icu/icu4c/source/allinone/icucheck.bat x86 Release
     - name: "Run PowerShell: Distrelease script"
       run: |
         ./build/scripts/distrelease_overlay.ps1
