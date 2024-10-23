@@ -27,10 +27,13 @@ New-Item -Path "$source\windows\globalization" -ItemType "directory" -ErrorActio
 New-Item -Path "$source\windows\globalization\ICU" -ItemType "directory" -ErrorAction SilentlyContinue
 
 # copy required stuff
-# Dlls 
+# Dlls
 Copy-Item -Path "$icuDir\bin64\icu.dll" -Destination "$source\windows\system32\"
+Copy-Item -Path "$icuDir\bin64\icuuc.dll" -Destination "$source\windows\system32\"
+Copy-Item -Path "$icuDir\bin64\icuin.dll" -Destination "$source\windows\system32\"
 Copy-Item -Path "$icuDir\bin\icu.dll" -Destination "$source\windows\syswow64\"
-# XXX: also copy icuuc and icuin after we can figure out how to generate them...
+Copy-Item -Path "$icuDir\bin\icuuc.dll" -Destination "$source\windows\syswow64\"
+Copy-Item -Path "$icuDir\bin\icuin.dll" -Destination "$source\windows\syswow64\"
 
 # data and .res (this assumes an in-source tree build)
 Copy-Item -Path "$icuDir\source\data\out\icudt72l.dat" -Destination "$source\windows\globalization\ICU\icudtl.dat"

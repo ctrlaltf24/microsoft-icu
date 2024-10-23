@@ -34,9 +34,16 @@
       <TypeLibraryName>$(OutDir)\icu.tlb</TypeLibraryName>
     </Midl>
     <ClCompile>
-      <!-- FIXME: Shouldn't this be Globalization? -->
-      <!-- FIXME: figure out how/when to add U_SHOW_CPLUSPLUS_API=0 . Needs to be set after compiling before dll exporting -->
-      <PreprocessorDefinitions>ICU_DATA_DIR_WINDOWS="globalization\\ICU\\";U_COMBINED_IMPLEMENTATION;U_ATTRIBUTE_DEPRECATED=;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <!--
+        Rational behind options:
+          U_EXPORT/U_EXPORT2 - set to remove __dlexport becuase we use a .def file to specify what should be exported.
+          ICU_DATA_DIR_WINDOWS - sets the path to look in
+          U_COMBINED_IMPLEMENTATION - tells the pre-processor we're compiling multiple things
+          U_COMMON_IMPLEMENTATION/U_I18N_IMPLEMENTATION - tells the pre-processor we're compiling common/i18n
+          U_DISABLE_RENAMING - don't include the major version number in all of the exports
+          U_PLATFORM_USES_ONLY_WIN32_API - tells the pre-processor this is compiling for windows
+      -->
+      <PreprocessorDefinitions>U_EXPORT=;U_EXPORT_2=;ICU_DATA_DIR_WINDOWS="Globalization\\ICU\\";U_COMBINED_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>..\..\include;..\common;..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -45,8 +52,7 @@
       <PrecompiledHeaderOutputFile>$(OutDir)/icu.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)/</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)/</ObjectFileName>
-      <!-- MSFT-Change: Include the ICU major version number in the PDB filename. -->
-      <ProgramDataBaseFileName>$(OutDir)/icu$(IcuMajorVersion).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)/icu.pdb</ProgramDataBaseFileName>
     </ClCompile>
   </ItemDefinitionGroup>
   <!-- Options that are common to all 'Debug' project configurations -->
@@ -60,12 +66,11 @@
     <Link>
       <!-- FIXME: figure out how to generate the icuuc.dll that links to this icu.dll -->
       <OutputFile>..\..\$(IcuBinOutputDir)\icud.dll</OutputFile>
-      <!-- MSFT-Change: Include the ICU major version number in the PDB filename. -->
-      <ProgramDatabaseFile>.\..\..\$(IcuLibOutputDir)\icu$(IcuMajorVersion)d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\..\..\$(IcuLibOutputDir)\icud.pdb</ProgramDatabaseFile>
       <ImportLibrary>..\..\$(IcuLibOutputDir)\icu.lib</ImportLibrary>
       <!-- MSFT-Change: This forces dynamic linking of the UCRT. -->
       <IgnoreSpecificDefaultLibraries>libucrtd.lib;libucrt.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalOptions>/DEFAULTLIB:ucrtd.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/DEFAULTLIB:ucrtd.lib /def:icu.def %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <!-- Options that are common to all 'Release' project configurations -->
@@ -77,8 +82,7 @@
     </ClCompile>
     <Link>
       <OutputFile>..\..\$(IcuBinOutputDir)\icu.dll</OutputFile>
-      <!-- MSFT-Change: Include the ICU major version number in the PDB filename. -->
-      <ProgramDatabaseFile>.\..\..\$(IcuLibOutputDir)\icu$(IcuMajorVersion).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\..\..\$(IcuLibOutputDir)\icu.pdb</ProgramDatabaseFile>
       <ImportLibrary>..\..\$(IcuLibOutputDir)\icu.lib</ImportLibrary>
       <!-- MSFT-Change: This forces dynamic linking of the UCRT. -->
       <IgnoreSpecificDefaultLibraries>libucrtd.lib;libucrt.lib</IgnoreSpecificDefaultLibraries>

@@ -27,33 +27,28 @@ jobs:
         $filterPath = "${{ github.workspace }}\build\filter.json"
         echo "ICU_DATA_FILTER_FILE=$filterPath" >> $GITHUB_ENV
       shell: pwsh
-    - name: Set up MSBuild
+    - name: Set up MSBuild for x64
       uses: microsoft/setup-msbuild@v2
+      with:
+        msbuild-architecture: x64
     - name: Build entire Solution x64
       run: |
         msbuild icu/icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true
         msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x64
+    - name: Run Tests x64 (icucheck.bat)
+      run: ./icu/icu4c/source/allinone/icucheck.bat x64 Release
+    - name: Generate forwarding dlls x64
+      run: ./build/build_forwarding_dlls.bat x64
+
     - name: Build entire Solution x86
       run: |
         msbuild icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x86 /p:SkipUWP=true
         msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x86
-    - name: Run Tests (icucheck.bat)
-      run: |
-        ./icu/icu4c/source/allinone/icucheck.bat x64 Release
-      # This fails for some reason
-      # ==== icuinfo =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\tools\icuinfo\x86\Release\icuinfo.exe  
-      # The system cannot find the path specified.
-      # ==== intltest =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\intltest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\intltest\x86\Release\intltest.exe  
-      # The system cannot find the path specified.
-      # ==== iotest =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\iotest>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\iotest\x86\Release\iotest.exe  
-      # The system cannot find the path specified.
-      # ==== cintltst =========================================================================
-      # D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\test\cintltst>"D:\a\microsoft-icu\microsoft-icu\icu\icu4c\source\allinone\"\..\..\source\test\cintltst\x86\Release\cintltst.exe  
-      # The system cannot find the path specified.
-      # ./icu/icu4c/source/allinone/icucheck.bat x86 Release
+    - name: Run Tests x86 (icucheck.bat)
+      run: ./icu/icu4c/source/allinone/icucheck.bat x86 Release
+    - name: Generate forwarding dlls x86
+      run: ./build/build_forwarding_dlls.bat x86
+
     - name: "Run PowerShell: Distrelease script"
       run: |
         ./build/scripts/distrelease_overlay.ps1
