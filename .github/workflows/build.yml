@@ -34,7 +34,8 @@ jobs:
 
     - name: Generate forwarding dlls x64
       run: |
-        iex "& \"$(C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest)\\VC\\Auxiliary\\Build\\vcvarsall.bat\" x64"
+        $VCPath = C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest
+        & "$VCPath\\VC\\Auxiliary\\Build\\vcvarsall.bat" x64
         ./build/scripts/build_forwarding_dlls.bat x64
 
     - name: Build entire Solution x64
