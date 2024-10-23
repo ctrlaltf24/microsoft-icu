@@ -43,7 +43,7 @@
           U_DISABLE_RENAMING - don't include the major version number in all of the exports
           U_PLATFORM_USES_ONLY_WIN32_API - tells the pre-processor this is compiling for windows
       -->
-      <PreprocessorDefinitions>U_EXPORT=;U_EXPORT_2=;ICU_DATA_DIR_WINDOWS="Globalization\\ICU\\";U_COMBINED_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>U_EXPORT=;U_EXPORT_2=;ICU_DATA_DIR_WINDOWS="globalization\\ICU\\";U_COMBINED_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>..\..\include;..\common;..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
