@@ -38,7 +38,7 @@ jobs:
     - name: Run Tests x64 (icucheck.bat)
       run: ./icu/icu4c/source/allinone/icucheck.bat x64 Release
     - name: Generate forwarding dlls x64
-      run: ./build/build_forwarding_dlls.bat x64
+      run: ./build/scripts/build_forwarding_dlls.bat x64
 
     - name: Build entire Solution x86
       run: |
@@ -47,7 +47,7 @@ jobs:
     - name: Run Tests x86 (icucheck.bat)
       run: ./icu/icu4c/source/allinone/icucheck.bat x86 Release
     - name: Generate forwarding dlls x86
-      run: ./build/build_forwarding_dlls.bat x86
+      run: ./build/scripts/build_forwarding_dlls.bat x86
 
     - name: "Run PowerShell: Distrelease script"
       run: |
