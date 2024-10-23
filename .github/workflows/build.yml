@@ -22,11 +22,6 @@ jobs:
     timeout-minutes: 30
     steps:
     - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-    - name: Set ICU_DATA_FILTER_FILE variable
-      run: |
-        $filterPath = "${{ github.workspace }}\build\filter.json"
-        echo "ICU_DATA_FILTER_FILE=$filterPath" >> $GITHUB_ENV
-      shell: pwsh
     - name: Set up MSBuild for x64
       uses: microsoft/setup-msbuild@v2
       with:
@@ -34,6 +29,7 @@ jobs:
 
     - name: Build entire Solution x64
       run: |
+        $env:ICU_DATA_FILTER_FILE = '${{ github.workspace }}/build/filters/filter.json'
         msbuild icu/icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true
         msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x64
     - name: Run Tests x64 (icucheck.bat)
@@ -41,6 +37,7 @@ jobs:
 
     - name: Build entire Solution x86
       run: |
+        $env:ICU_DATA_FILTER_FILE = '${{ github.workspace }}/build/filters/filter.json'
         msbuild icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x86 /p:SkipUWP=true
         msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x86
       # The following tests fail with this error, the x64 passes.
