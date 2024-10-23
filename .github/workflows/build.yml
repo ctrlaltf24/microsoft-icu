@@ -32,17 +32,6 @@ jobs:
       with:
         msbuild-architecture: x64
 
-    - name: Generate forwarding dlls x64
-      shell: cmd
-      run: |
-        FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
-        cmd.exe /c ""%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x64 && .\build\scripts\build_forwarding_dlls.bat x64"
-    - name: Generate forwarding dlls x86
-      shell: cmd
-      run: |
-        FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
-        cmd.exe /c ""%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x86 && .\build\scripts\build_forwarding_dlls.bat x86"
-        
     - name: Build entire Solution x64
       run: |
         msbuild icu/icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true
@@ -70,6 +59,17 @@ jobs:
       # The system cannot find the path specified.
     # - name: Run Tests x86 (icucheck.bat)
     #   run: ./icu/icu4c/source/allinone/icucheck.bat x86 Release
+
+    - name: Generate forwarding dlls x64
+      shell: cmd
+      run: |
+        FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
+        cmd.exe /c ""%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x64 && .\build\scripts\build_forwarding_dlls.bat x64"
+    - name: Generate forwarding dlls x86
+      shell: cmd
+      run: |
+        FOR /F "tokens=*" %%g IN ('C:\\ProgramData\\Chocolatey\\bin\\vswhere.exe -products * -property installationPath -latest') do (SET vc_path=%%g)
+        cmd.exe /c ""%vc_path%\VC\Auxiliary\Build\vcvarsall.bat" x86 && .\build\scripts\build_forwarding_dlls.bat x86"
 
     - name: "Run PowerShell: Distrelease script"
       run: |
