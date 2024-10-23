@@ -11,30 +11,35 @@
 # This builds a tarball containing the icu binaries that windows ships with
 
 $icuDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
-$icuDir = Resolve-Path -Path '$icuDir\..'
+$icuDir = Resolve-Path -Path '$icuDir\..\icu\icu4c'
 
 echo  $icuDir
 
 # ok, create some work areas
 New-Item -Path "$icuDir\source\dist" -ErrorAction SilentlyContinue -ItemType "directory"
-$source = "$icuDir\source\dist\windows"
+$source = "$icuDir\source\dist\to_package"
 Get-ChildItem -Path $source -ErrorAction SilentlyContinue | Remove-Item -Recurse
 New-Item -Path $source -ItemType "directory" -ErrorAction SilentlyContinue
+New-Item -Path "$source\windows" -ItemType "directory" -ErrorAction SilentlyContinue
+New-Item -Path "$source\windows\system32" -ItemType "directory" -ErrorAction SilentlyContinue
+New-Item -Path "$source\windows\syswow64" -ItemType "directory" -ErrorAction SilentlyContinue
+New-Item -Path "$source\windows\globalization" -ItemType "directory" -ErrorAction SilentlyContinue
+New-Item -Path "$source\windows\globalization\ICU" -ItemType "directory" -ErrorAction SilentlyContinue
 
 # copy required stuff
 # Dlls 
-Copy-Item -Path "$icuDir\bin64\icu.dll" -Destination "$source\system32\" -Recurse
-Copy-Item -Path "$icuDir\bin\icu.dll" -Destination "$source\syswow64\" -Recurse
+Copy-Item -Path "$icuDir\bin64\icu.dll" -Destination "$source\windows\system32\"
+Copy-Item -Path "$icuDir\bin\icu.dll" -Destination "$source\windows\syswow64\"
 # XXX: also copy icuuc and icuin after we can figure out how to generate them...
 
 # data and .res (this assumes an in-source tree build)
-Copy-Item -Path "$icuDir\data\out\icudt72l.dat" -Destination "$source\Globalization\ICU\icudtl.dat"
-Copy-Item -Path "$icuDir\data\out\build\metaZones.res" -Destination "$source\Globalization\ICU\"
-Copy-Item -Path "$icuDir\data\out\build\timezoneTypes.res" -Destination "$source\Globalization\ICU\"
-Copy-Item -Path "$icuDir\data\out\build\windowsZones.res" -Destination "$source\Globalization\ICU\"
-Copy-Item -Path "$icuDir\data\out\build\zoneinfo64.res" -Destination "$source\Globalization\ICU\"
+Copy-Item -Path "$icuDir\source\data\out\icudt72l.dat" -Destination "$source\windows\globalization\ICU\icudtl.dat"
+Copy-Item -Path "$icuDir\source\data\out\build\icudt72l\metaZones.res" -Destination "$source\windows\globalization\ICU\"
+Copy-Item -Path "$icuDir\source\data\out\build\icudt72l\timezoneTypes.res" -Destination "$source\windows\globalization\ICU\"
+Copy-Item -Path "$icuDir\source\data\out\build\icudt72l\windowsZones.res" -Destination "$source\windows\globalization\ICU\"
+Copy-Item -Path "$icuDir\source\data\out\build\icudt72l\zoneinfo64.res" -Destination "$source\windows\globalization\ICU\"
 
-Copy-Item -Path "$icuDir\LICENSE" -Destination "$source\Globalization\ICU\LICENSE-ICU" -Recurse
+Copy-Item -Path "$icuDir\LICENSE" -Destination "$source\windows\globalization\ICU\LICENSE-ICU"
 
 
 $destination = "$icuDir\source\dist\icu-win.tar.gz"
@@ -42,6 +47,6 @@ Remove-Item -Path $destination -ErrorAction Continue
 Echo $source
 Echo $destination
 
-tar -cvf $destination $source
+tar -cvf $destination -C $source .
 
 echo $destination
