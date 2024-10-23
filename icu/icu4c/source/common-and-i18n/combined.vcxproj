@@ -36,14 +36,14 @@
     <ClCompile>
       <!--
         Rational behind options:
-          U_EXPORT/U_EXPORT2 - set to remove __dlexport becuase we use a .def file to specify what should be exported.
+          U_EXPORT - set to remove __dlexport becuase we use a .def file to specify what should be exported.
           ICU_DATA_DIR_WINDOWS - sets the path to look in
           U_COMBINED_IMPLEMENTATION - tells the pre-processor we're compiling multiple things
           U_COMMON_IMPLEMENTATION/U_I18N_IMPLEMENTATION - tells the pre-processor we're compiling common/i18n
           U_DISABLE_RENAMING - don't include the major version number in all of the exports
           U_PLATFORM_USES_ONLY_WIN32_API - tells the pre-processor this is compiling for windows
       -->
-      <PreprocessorDefinitions>U_EXPORT=;U_EXPORT_2=;ICU_DATA_DIR_WINDOWS="globalization\\ICU\\";U_COMBINED_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>U_EXPORT=;ICU_DATA_DIR_WINDOWS="globalization\\ICU\\";U_COMBINED_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_DISABLE_RENAMING=1;U_PLATFORM_USES_ONLY_WIN32_API=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>..\..\include;..\common;..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -86,7 +86,7 @@
       <ImportLibrary>..\..\$(IcuLibOutputDir)\icu.lib</ImportLibrary>
       <!-- MSFT-Change: This forces dynamic linking of the UCRT. -->
       <IgnoreSpecificDefaultLibraries>libucrtd.lib;libucrt.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalOptions>/DEFAULTLIB:ucrt.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/DEFAULTLIB:ucrt.lib /def:icu.def %(AdditionalOptions)</AdditionalOptions>
       <!-- FIXME: Also filter out IGNORE_WINDOWS_HEADERS? -->
     </Link>
   </ItemDefinitionGroup>

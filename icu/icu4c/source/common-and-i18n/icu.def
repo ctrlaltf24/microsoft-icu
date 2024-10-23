@@ -5,12 +5,13 @@
 ;
 LIBRARY "icu.dll"
 EXPORTS
-CloseDefaultICUGroupingLetters
-GetDefaultICUGroupingLetters
-GetICUGroupingLetter
-SortCloseHandle
-SortGetHandle
-SortGetSearchKey
+; FIXME: The following exports were not found in this repository, perhaps they are implemented in some proprietary ICU repository within Microsoft?
+; CloseDefaultICUGroupingLetters
+; GetDefaultICUGroupingLetters
+; GetICUGroupingLetter
+; SortCloseHandle
+; SortGetHandle
+; SortGetSearchKey
 UCNV_FROM_U_CALLBACK_ESCAPE
 UCNV_FROM_U_CALLBACK_SKIP
 UCNV_FROM_U_CALLBACK_STOP
