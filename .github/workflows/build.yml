@@ -32,18 +32,18 @@ jobs:
     - name: Build entire Solution x64
       run: |
         msbuild icu/icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true
-        msbuild icu/icu4c/source/common-and-i18n.vcxproj /p:Configuration=Release /p:Platform=x64
+        msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x64
     - name: Build entire Solution x86
       run: |
         msbuild icu4c/source/allinone/allinone.sln /p:Configuration=Release /p:Platform=x86 /p:SkipUWP=true
-        msbuild icu/icu4c/source/common-and-i18n.vcxproj /p:Configuration=Release /p:Platform=x86
+        msbuild icu/icu4c/source/common-and-i18n/combined.vcxproj /p:Configuration=Release /p:Platform=x86
     - name: Run Tests (icucheck.bat)
       run: |
         icu4c/source/allinone/icucheck.bat x64 Release
         icu4c/source/allinone/icucheck.bat x86 Release
     - name: "Run PowerShell: Distrelease script"
       run: |
-        ./build/distrelease_overlay.ps1
+        ./build/scripts/distrelease_overlay.ps1
       shell: pwsh
     - name: Upload artifact
       uses: actions/upload-artifact@v4
