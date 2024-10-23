@@ -42,7 +42,7 @@ Copy-Item -Path "$icuDir\source\data\out\build\icudt72l\timezoneTypes.res" -Dest
 Copy-Item -Path "$icuDir\source\data\out\build\icudt72l\windowsZones.res" -Destination "$source\windows\globalization\ICU\"
 Copy-Item -Path "$icuDir\source\data\out\build\icudt72l\zoneinfo64.res" -Destination "$source\windows\globalization\ICU\"
 
-Copy-Item -Path "$icuDir\LICENSE" -Destination "$source\windows\globalization\ICU\LICENSE-ICU"
+Copy-Item -Path "$icuDir\LICENSE" -Destination "$source\windows\globalization\ICU\LICENSE-ICU.txt"
 
 
 $destination = "$icuDir\source\dist\icu-win.tar.gz"
