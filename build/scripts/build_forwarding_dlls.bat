@@ -2,7 +2,7 @@
 :: Build the icuuc and icuin dlls to forward to icu.dll
 
 set original_directory="%cd%"
-set arch="%1"
+set arch=%1
 
 echo. Got Arch: %arch%
 
@@ -17,10 +17,11 @@ cd %original_directory%
 EXIT /b %ERRORLEVEL%
 
 :compile_dll
-echo. Got Library: %~1
-
 IF %arch%==x64 set out_dir="..\..\bin64"
 IF %arch%==x86 set out_dir="..\..\bin"
+
+echo. Got Library: %~1
+echo. Got Output directory: %out_dir%
 
 :: Cleanup since last run
 del cmemory.obj %~1.dll %~1.lib %~1.exp ucln_cmn.lib ucln_cmn.exp ucln_cmn.obj umutex.obj utrace.obj
