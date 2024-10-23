@@ -3,8 +3,15 @@
 
 set original_directory="%cd%"
 set arch=%1
+set out_dir=
+
+IF %arch%==x64 set out_dir="..\..\bin64"
+IF %arch%==x86 set out_dir="..\..\bin"
+
+IF [%out_dir%]==[] echo Invalid architecture: %arch% (must be either x64 or x86) && EXIT /b 1
 
 echo. Got Arch: %arch%
+echo. Got Output directory: %out_dir%
 
 cd %~dp0
 cd ..\..\icu\icu4c\source\common
@@ -17,11 +24,7 @@ cd %original_directory%
 EXIT /b %ERRORLEVEL%
 
 :compile_dll
-IF %arch%==x64 set out_dir="..\..\bin64"
-IF %arch%==x86 set out_dir="..\..\bin"
-
 echo. Got Library: %~1
-echo. Got Output directory: %out_dir%
 
 :: Cleanup since last run
 del cmemory.obj %~1.dll %~1.lib %~1.exp ucln_cmn.lib ucln_cmn.exp ucln_cmn.obj umutex.obj utrace.obj
