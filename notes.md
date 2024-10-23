@@ -29,4 +29,4 @@ make clean all
 ```
 - `make` (this is needed for generating the icu76l.dat, we could cope it but this is easier)
 - Generate libs for combined build `msbuild icu\icu4c\source\allinone\allinone.sln /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true`
-- Generate the combined icu.dll `msbuild icu\icu4c\source\command-and-i18n\combined.vcxproj /p:Configuration=Release /p:Platform=x64 `
+- Generate the combined icu.dll `msbuild icu\icu4c\source\common-and-i18n\combined.vcxproj /p:Configuration=Release /p:Platform=x64 `
